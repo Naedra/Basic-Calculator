@@ -86,9 +86,7 @@ public class BasicCalculatorFunctionality {
 		return factorial(n-1) * n;
 	}
 	
-	public double FarenheittoCelcius(double F) {
-		return 0;
-	}
+	
 		
 	}
 	
