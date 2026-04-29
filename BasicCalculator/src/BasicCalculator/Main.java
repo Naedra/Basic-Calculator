@@ -96,7 +96,7 @@ public class Main {
 		}
 			double div = test.div(numerator, denominator);
 			System.out.println("The division of: "+ numerator +" div " + denominator+ " is: "+ div);
-			System.out.println("With a remainder of: " + numerator % denominator);
+			
 		}//End of selection 4
 		
 		if(selection ==5) {
@@ -265,11 +265,21 @@ public class Main {
 		   }//End of 1
 		   
 		   else if(unit ==2) {
-			   System.out.println("Please select the unit you want to convert by selecting the letter");
-			   System.out.println();
-			   System.out.println();
-			   System.out.println();
-			   System.out.println();
+			   System.out.println("Please enter the unit you have (cm, km, mm, m, in, ft, yd, mi)");
+			   String origin = uinp.next();
+			   origin = origin.toLowerCase();
+			   
+			   System.out.println("Please enter the unit you want (cm, km, mm, m, in, ft, yd, mi)");
+			   String conversion = uinp.next();
+			   conversion = conversion.toLowerCase();
+			   
+			   System.out.println("Please enter the numeric value you want to convert");
+			   double value = uinp.nextInt();
+			   
+			   Double convert = unitConversion.ConvertLenght(origin, conversion, value);
+			   
+			   System.out.println(value +"" + origin + " is " + convert + ""+ conversion );
+			   
 			   
 			   
 		   }
