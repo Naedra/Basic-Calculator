@@ -46,6 +46,9 @@ public class UnitConversionFunctionality {
 					 
 				 case "in":
 					 return value * 39370;
+					 
+				 default:
+					    throw new IllegalArgumentException("Invalid conversion");
 				}
 		  case "cm":
 			  switch(conversion) {
@@ -67,6 +70,9 @@ public class UnitConversionFunctionality {
 				 case "in":
 					 return value/2.54;	 
 					 
+				 default:
+					    throw new IllegalArgumentException("Invalid conversion");
+					 
 				}	
 		  case "ft":
 			  switch(conversion) {
@@ -86,7 +92,10 @@ public class UnitConversionFunctionality {
 					 return value/5280;
 					 
 				 case "in":
-					 return value*12;	 
+					 return value*12;	
+					 
+				 default:
+					    throw new IllegalArgumentException("Invalid conversion");
 					 
 				}	
 		  case "m":
@@ -94,7 +103,7 @@ public class UnitConversionFunctionality {
 			     case "cm":
 					 return value*100;
 				 case "yd":
-					 return value *1.094;
+					 return value / 0.9144;
 				 case "ft":
 					 return value/ 3.281;
 				 case "km":
@@ -107,7 +116,10 @@ public class UnitConversionFunctionality {
 					 return value/1609;
 					 
 				 case "in":
-					 return value*39.37;	 
+					 return value*39.37;	
+					 
+				 default:
+					    throw new IllegalArgumentException("Invalid conversion");
 					 
 				}	
 		  case "yd":
@@ -115,7 +127,7 @@ public class UnitConversionFunctionality {
 			     case "cm":
 					 return value*91.44;
 				 case "m":
-					 return value *1.094;
+					 return value *0.9144;
 				 case "ft":
 					 return value*3;
 				 case "km":
@@ -128,7 +140,10 @@ public class UnitConversionFunctionality {
 					 return value/1760;
 					 
 				 case "in":
-					 return value*36;	 
+					 return value*36;	
+					 
+				 default:
+					    throw new IllegalArgumentException("Invalid conversion");
 					 
 				}
 		  case "in":
@@ -151,10 +166,14 @@ public class UnitConversionFunctionality {
 				 case "yd":
 					 return value/36;	 
 					 
+				 default:
+					    throw new IllegalArgumentException("Invalid conversion");
+					 
 				}
-			  
+		  default:
+			    throw new IllegalArgumentException("Invalid conversion");
 		}
-		
-		return 0;
+	
+	 
 	}
 }
