@@ -20,6 +20,8 @@ public class Main {
 	    String s = uinp.next();
 	    
 	    if(s.equals("a")) {
+	    	
+	    	try {
 		
 		 System.out.println("Please select the option you want to calculate(Please only write the number)");
 		 System.out.println("Select one of the following \n"
@@ -33,14 +35,19 @@ public class Main {
 				"8. Factorial");
 		//uinp.next();
 		
-		
+	    	}
+	    	
+	    	catch(NumberFormatException ex) {
+	    		System.out.println("Please enter a valid number");
+	    		
+	    	}
 		
 			
 		try{
 			selection = uinp.nextInt();
 			
 		}
-		 catch (Exception e) {
+		 catch (NumberFormatException ex) {
 			System.out.println("Please enter a valid number");
 			return;
 			

@@ -31,6 +31,17 @@ public class BasicCalculatorGUI {
 	
 	JComboBox<String> Opt ;
 	
+	private int getInt(JTextField field) {
+		return Integer.parseInt(field.getText());
+		
+	}
+	
+	private double getDouble(JTextField fieldd) 
+	
+	{
+		return Double.parseDouble(fieldd.getText());
+	}
+	
 	//This method is for all the arithmetic functions except (sum and subtraction)
 	private int[] getInputs() throws NumberFormatException {
 		
@@ -91,7 +102,7 @@ public class BasicCalculatorGUI {
         Opt.setFont(o);
         JButton selectButton = new JButton("Select");
         JLabel instruction = new JLabel("Please select the option you want.");
-        menu.add(instruction);
+        menu.add(instruction); 
         menu.add(Opt);
         menu.add(selectButton);
         
@@ -235,7 +246,7 @@ public class BasicCalculatorGUI {
         	}
         });
         
-        //Button functionality to go back to the menu from Lenght Conversion
+        //Button functionality to go back to the menu from Length Conversion
         backtoM1.addActionListener(new ActionListener() {
         	
         	
@@ -365,7 +376,7 @@ public class BasicCalculatorGUI {
 		FactorialButton.addActionListener(new ActionListener(){
 			public void actionPerformed(ActionEvent e) {
 				try {
-				int num =  Integer.parseInt(i1.getText());
+				int num =  getInt(i1);
 				
                
 				int  fact = test.factorial(num);
@@ -383,10 +394,10 @@ public class BasicCalculatorGUI {
 				i3.setVisible(true);
 			    i4.setVisible(true);
 			    i5.setVisible(false);  
-				int a = Integer.parseInt(i1.getText());
-		        int b = Integer.parseInt(i2.getText());
-		        int c = Integer.parseInt(i3.getText());
-		        int d = Integer.parseInt(i4.getText());
+				int a = getInt(i1);
+		        int b = getInt(i2);
+		        int c = getInt(i3);
+		        int d = getInt(i4);
                
 				double dot = test.doTproductSum(a,b,c,d);
 				result.setText("Result: " + dot);
@@ -404,11 +415,11 @@ public class BasicCalculatorGUI {
 				i3.setVisible(true);
 			    i4.setVisible(true);
 			    i5.setVisible(true);  
-				int a = Integer.parseInt(i1.getText());
-		        int b = Integer.parseInt(i2.getText());
-		        int c = Integer.parseInt(i3.getText());
-		        int d = Integer.parseInt(i4.getText());
-		        int f = Integer.parseInt(i5.getText());
+				int a = getInt(i1);
+		        int b = getInt(i2);
+		        int c = getInt(i3);
+		        int d = getInt(i4);
+		        int f = getInt(i5);
                
 				double dot = test.dotProductAngle(a,b,c,d,f);
 				result.setText("Result: " + dot);
@@ -439,7 +450,7 @@ public class BasicCalculatorGUI {
         		try {
 		String f = i6.getText().toLowerCase();
         String g = i7.getText().toLowerCase();
-        double h = Integer.parseInt(i8.getText());
+        double h = getInt(i8);
         
 		double dot = unitConversion.ConvertLenght(f,g,h);
 		resultConversion.setText("Result: " + dot);
@@ -464,7 +475,7 @@ public class BasicCalculatorGUI {
     		try {
     			String option = (String) tempSelector.getSelectedItem();
     			i9.setVisible(true);
-    			double value = Double.parseDouble(i9.getText());
+    			double value = getDouble(i9);
     			double resultVal =0;
     			
     			switch(option) {
