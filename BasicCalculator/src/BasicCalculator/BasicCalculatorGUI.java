@@ -113,7 +113,7 @@ public class BasicCalculatorGUI {
         
         JButton addButton = new JButton("+");
         JButton subButton = new JButton("-");
-        JButton divButton = new JButton("%");
+        JButton divButton = new JButton("/");
         JButton multButton = new JButton("x");
         JButton sqrtButton = new JButton("√");
         JButton powerButton = new JButton("^");
